@@ -1,2 +1,1 @@
-# search-bar-redux
-Created with CodeSandbox
+# Search Functionality Written With Redux
