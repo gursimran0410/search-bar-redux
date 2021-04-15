@@ -1,3 +1,5 @@
+import { countryListAction, countryListDefaultAction } from "./actions";
+
 const initialState = {
   input: "",
   countryListDefault: [],
@@ -27,4 +29,13 @@ export default function rootReducer(state = initialState, action) {
     default:
       return state;
   }
+}
+
+export async function fetchCountries(dispatch, getState) {
+  await fetch("https://restcountries.eu/rest/v2/all")
+    .then((response) => response.json())
+    .then((data) => {
+      dispatch(countryListAction(data));
+      dispatch(countryListDefaultAction(data));
+    });
 }
