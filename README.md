@@ -1,1 +1,1 @@
-# Search Functionality Written With Redux
+# Search Functionality Written With Redux and Thunk
