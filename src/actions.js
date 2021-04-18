@@ -18,3 +18,10 @@ export const countryListAction = (value) => {
     payload: value
   };
 };
+
+export const updateLoading = (value) => {
+  return {
+    type: "updateLoading",
+    payload: value
+  };
+};
